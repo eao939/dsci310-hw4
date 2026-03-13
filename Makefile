@@ -14,12 +14,10 @@ results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses
 	python source/generate_figures.py --input_dir="data/00030067-eng.csv" \
 		--out_dir="results"
 
-# render quarto report in HTML and PDF
-reports/qmd_example.html: results reports/qmd_example.qmd
-	quarto render reports/qmd_example.qmd --to html
+# render quarto report in HTML and PDF - *changing this so that I render both at the same time*
+reports/qmd_example.html reports/qmd_example.pdf: results reports/qmd_example.qmd
+	quarto render reports/qmd_example.qmd 
 
-reports/qmd_example.pdf: results reports/qmd_example.qmd
-	quarto render reports/qmd_example.qmd --to pdf
 
 # clean
 clean:
