@@ -14,15 +14,11 @@ format:
         text: PDF
         icon: file-earmark-pdf
         href: qmd_example.pdf
+    self-contained: true   #making it self contained so i can move html without breaking relative paths 
   pdf:
     toc: true
     number-sections: true
-
-#format-links:
-#    - title: Other Formats
-#      text: PDF
-#      href: qmd_example.pdf
-
+    self-contained: true   #making it self contained so i can move html without breaking relative paths 
 
 
 execute:                               #dont show code chunk
